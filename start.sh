@@ -23,9 +23,9 @@ _make_install() {
     mkdir apps/$app_dir
     cd ${app_name}-${version}
     $MAKE_OPT
-    make install PREFIX=$basepath/apps/$app_dir
+    # make install PREFIX=$basepath/apps/$app_dir
+    make install
     cd .. && tar Jcvf $app_pkg_name.tar.xz apps/$app_pkg_name
-    tree
 }
 
 _make_install "$@"
