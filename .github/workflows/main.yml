@@ -30,4 +30,4 @@ jobs:
 
         run: |
           # bash start.sh nginx-version-num
-          bash start.sh 2.2.8
+          bash -x start.sh 2.2.8
