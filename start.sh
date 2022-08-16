@@ -20,6 +20,8 @@ MAKE_OPT="make -j $(nproc) ARCH=x86_64 TARGET=generic USE_PCRE=1 USE_OPENSSL=1 U
 _make_install() {
     wget -c http://www.haproxy.org/download/${version%.[0-9]}/src/${app_name}-${version}.tar.gz
     ls
+    tar xf ${app_name}-${version}.tar.gz
+    tree
 }
 
 _make_install "$@"
