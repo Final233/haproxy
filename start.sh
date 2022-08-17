@@ -15,7 +15,7 @@ mkdir apps
 app_name="haproxy"
 app_dir="$app_name-$version"
 app_pkg_name="$app_name-$version"
-MAKE_OPT="make -j $(nproc) TARGET=generic ARCH=x86_64 USE_OPENSSL=1 USE_PCRE=1 USE_SYSTEMD=1 USE_ZLIB=1 USE_SYSTEMD=1 USE_CPU_AFFINITY=1 PREFIX=$basepath/apps/$app_dir"
+MAKE_OPT="make -j $(nproc) TARGET=generic ARCH=x86_64 USE_OPENSSL=1 USE_PCRE=1 USE_SYSTEMD=0 USE_ZLIB=1 USE_SYSTEMD=1 USE_CPU_AFFINITY=1 PREFIX=$basepath/apps/$app_dir"
 # MAKE_OPT="make -j $(nproc) TARGET=linux-glibc ARCH=x86_64 USE_OPENSSL=1 USE_PCRE=1 USE_SYSTEMD=1 USE_ZLIB=1 USE_SYSTEMD=1 USE_CPU_AFFINITY=1 PREFIX=$basepath/apps/$app_dir"
 
 _make_install() {
