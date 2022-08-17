@@ -26,6 +26,7 @@ _make_install() {
     sudo $MAKE_OPT && sudo make install PREFIX=$basepath/apps/$app_dir
     # make install PREFIX=$basepath/apps/$app_dir
     cd .. && tar Jcvf $app_pkg_name.tar.xz apps/$app_pkg_name
+    tree  ${app_name}-${version}
 }
 
 _make_install "$@"
