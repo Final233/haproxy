@@ -22,9 +22,8 @@ _make_install() {
     tar xf ${app_name}-${version}.tar.gz
     mkdir apps/$app_dir
     cd ${app_name}-${version}
-    $MAKE_OPT
+    $MAKE_OPT && make install
     # make install PREFIX=$basepath/apps/$app_dir
-    make install
     cd .. && tar Jcvf $app_pkg_name.tar.xz apps/$app_pkg_name
 }
 
