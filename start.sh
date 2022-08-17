@@ -25,6 +25,9 @@ _make_install() {
     cd ${app_name}-${version}
     sudo $MAKE_OPT && sudo make install PREFIX=$basepath/apps/$app_dir
     # make install PREFIX=$basepath/apps/$app_dir
+    content-sw-sample.cfg
+    cp examples/haproxy.init ../apps/$app_pkg_name/.
+    cp contrib/systemd/haproxy.service.in ../apps/$app_pkg_name/.
     cd .. && tar Jcvf $app_pkg_name.tar.xz apps/$app_pkg_name
     tree  ${app_name}-${version}
 }
