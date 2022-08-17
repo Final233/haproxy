@@ -30,6 +30,6 @@ jobs:
 
         run: |
           sudo apt-get update
-          sudo apt-get install build-essential
+          sudo apt-get install build-essential libpcap-dev
           # bash start.sh nginx-version-num
           bash -x start.sh 2.2.8
